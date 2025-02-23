@@ -305,8 +305,6 @@ class BMDriver extends TestDriver implements GlobalConst {
     PageId firstPid = new PageId();
     boolean status = OK;
 
-    System.out.println("numPages" + numPages);
-
     System.out.print("  - Try to pin more pages than there are frames\n");
     try {
       firstPid = SystemDefs.JavabaseBM.newPage( pg, numPages );
