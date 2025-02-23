@@ -15,11 +15,11 @@ class HashNode {
     }
 }
 
-public class CustomPageHashMap {
+public class CustomHashTable {
     private LinkedList<HashNode>[] buckets;
     private int capacity;
 
-    public CustomPageHashMap(int entries) {
+    public CustomHashTable(int entries) {
         capacity = entries;
         buckets = new LinkedList[capacity];
         for (int i = 0; i < buckets.length; i++) {
@@ -28,8 +28,10 @@ public class CustomPageHashMap {
     }
 
     private int computeHash(PageId key) {
-        int hash = key.pid % capacity;
-        return (hash < 0) ? hash + capacity : hash; 
+        int a = 7;
+        int b = 3;
+        int hash = Math.abs((a * key.pid + b) % capacity);
+        return hash;
     }
 
     public void put(PageId key, int value) {
