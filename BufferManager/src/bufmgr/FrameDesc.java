@@ -12,6 +12,7 @@ public class FrameDesc {
         isDirty = false;
     }
 
+    //Test Constructor
     public FrameDesc(int pageNumber, int pinCount, boolean isDirty) {
         this.pageNumber = pageNumber;
         this.pinCount = pinCount;
